@@ -9,7 +9,7 @@ class CustomersController < ApplicationController
       format.html
       format.pdf do
         render pdf: 'file_name',
-        layout: 'pdf.html',
+        layout: 'layouts/pdf.html.erb',
         show_as_html: params[:debug].present?
       end
     end
