@@ -1,14 +1,14 @@
-<p>
-  <strong>Name:</strong>
-  <%= @customer.name %>
-</p>
-
-<p>
-  <strong>Cpf:</strong>
-  <%= @customer.cpf %>
-</p>
-
-<p>
-  <strong>Occupation:</strong>
-  <%= @customer.occupation %>
-</p>
+<table class="table table-bordered table-condensed">
+  <tr>
+    <td>Name:</td>
+    <td><%= @customer.name %></td>
+  </tr>
+  <tr>
+    <td>CPF:</td>
+    <td><%= @customer.cpf %></td>
+  </tr>
+  <tr>
+    <td>Occupation:</td>
+    <td><%= @customer.occupation %></td>
+  </tr>
+</table>

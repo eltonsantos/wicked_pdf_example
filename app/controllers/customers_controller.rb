@@ -8,9 +8,9 @@ class CustomersController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render :pdf => 'file_name',
-        :template => 'customers/index.pdf.erb',
-        :show_as_html => params[:debug].present?
+        render pdf: 'file_name',
+        layout: 'pdf.html',
+        show_as_html: params[:debug].present?
       end
     end
   end
@@ -22,6 +22,7 @@ class CustomersController < ApplicationController
       format.html
       format.pdf do
         render :pdf => 'file_name',
+        layout: 'pdf.html',
         :template => 'customers/show.pdf.erb',
         :show_as_html => params[:debug].present?
       end
